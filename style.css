@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --padding: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: var(--padding);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  line-height: 24px;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+  background-color: #b19772;
+}
+
+.photo {
+  height: 300px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid whitesmoke;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.emphasize {
+  font-weight: 600;
+}
+
+/* Сетка */
+
+/* Контейнеры */
+
+.grid-container {
+  display: grid;
+  height: calc(100vh - 32px);
+  grid-template-columns: 1fr minmax(250px, 1fr) 1fr 300px;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.nested-grid,
+.nested-grid__second {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.grid-item__flex {
+  display: flex;
+  position: relative;
+  align-self: flex-end;
+  top: 10px;
+  gap: 10px;
+  padding-bottom: 4px;
+  flex-direction: column;
+  align-items: flex-start;
+  height: max-content;
+}
+
+/* Все ячейки */
+
+.grid-item {
+  display: flex;
+  /* border: 1px solid #555; */
+}
+
+/* Отдельные ячейки */
+
+.item1,
+.item2,
+.item3 {
+  padding-right: 32px;
+}
+
+.item4 {
+  height: fit-content;
+}
+
+/* Ячейки второго ряда (заголовок и биография) */
+
+.item5 {
+  grid-column: 1 / 4;
+  grid-row: 2;
+  align-self: flex-end;
+}
+
+.item5__contents {
+  font-weight: 700;
+  font-size: calc(8vw - 15px);
+  line-height: calc(8vw - 20px);
+  margin: 0;
+}
+
+.item6 {
+  padding-bottom: 16px;
+  align-self: flex-end;
+}
+
+.item6__contents {
+}
+
+/* Ячейки третьего ряда */
+
+.item7,
+.item8,
+.item9 {
+  align-self: flex-end;
+  padding-bottom: 6px;
+}
+
+.item10 {
+  height: fit-content;
+  align-self: flex-end;
+}
+
+/* Остальные ячейки */
+
+.link {
+  text-decoration: none;
+  position: relative;
+}
+
+.link::after {
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+}
+
+.link:hover {
+  font-weight: 600;
+}
+
+.link:visited {
+  color: unset;
+}

@@ -10,11 +10,15 @@
   }
 
   .nested-grid__second {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .hidden {
     visibility: unset;
+    display: none;
+  }
+
+  .item1 {
     display: none;
   }
 
@@ -29,7 +33,7 @@
   }
 
   .item5__contents {
-    font-size: 9vw;
+    font-size: 9.5vw;
     line-height: 8vw;
     margin: 32px 0;
   }
@@ -53,11 +57,11 @@
 
   .item6 {
     grid-column: 1;
-    grid-row: 8;
+    grid-row: 7;
   }
 
   .nested-grid {
     grid-column: 1;
-    grid-row: 10;
+    grid-row: 9;
   }
 }
